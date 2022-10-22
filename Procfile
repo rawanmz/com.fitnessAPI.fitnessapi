@@ -1,1 +1,1 @@
-web: build/install/com.fitnessAPI.fitnessapi/bin/com.fitnessAPI.fitnessapi
+web:build/install/com.fitnessAPI.fitnessapi/bin/com.fitnessAPI.fitnessapi
