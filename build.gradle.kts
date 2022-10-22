@@ -29,7 +29,7 @@ repositories {
 dependencies {
 
     implementation("io.ktor:ktor-server-core:2.1.2")
-    implementation("io.ktor:ktor-serialization-kotlinx-json:2.1.2")
+    implementation("io.ktor:ktor-serialization-gson-jvm:2.1.2")
     implementation("io.ktor:ktor-server-netty:2.1.2")
     implementation("ch.qos.logback:logback-classic:1.4.4")
     implementation("io.ktor:ktor-server-content-negotiation:2.1.2")
