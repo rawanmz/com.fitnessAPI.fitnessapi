@@ -16,6 +16,10 @@ application {
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
+//to deploy server
+tasks.create("stage"){
+  dependsOn("installDist")
+}
 
 repositories {
     mavenCentral()
@@ -30,7 +34,10 @@ dependencies {
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 
-    implementation("org.litote.kmongo:kmongo:4.5.1")
-    implementation("org.litote.kmongo:kmongo-coroutine:4.5.1")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2")
+    implementation("org.litote.kmongo:kmongo:4.7.1")
+    implementation("org.litote.kmongo:kmongo-coroutine:4.7.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    implementation("io.ktor:ktor-client-core:$ktor_version")
+    implementation("it.skrape:skrapeit:1.2.2")
+
 }
